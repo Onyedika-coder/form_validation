@@ -16,27 +16,27 @@ const pass2_err = document.getElementById("pass2_err");
 
 
 if(username.value === ""){
-username.style.borderColor = "red";
+username.style.borderBottomColor = "red";
 name_err.classList.add('err');
 name_err.innerText = "input username";
 }else{
-    username.style.borderColor = "green";
+    username.style.borderBottomColor = "green";
     name_err.classList.add('success');
     name_err.innerText = "";
 }
 
 if(email.value === ""){
-    email.style.borderColor = "red";
+    email.style.borderBottomColor = "red";
     email_err.classList.add('err');
     email_err.innerText = "input email";
     }else{
-        email.style.borderColor = "green";
+        email.style.borderBottomColor = "green";
         email_err.classList.add('success');
         email_err.innerText = "";
     }
    const passFunc = () => {
     if(password.value === ""){
-        password.style.borderColor = "red";
+        password.style.borderBottomColor = "red";
         pass_err.classList.add('err');
         pass_err.innerText = "input password";
 
@@ -45,7 +45,7 @@ if(email.value === ""){
 
 
     if( password.value.length > 0 && password.value.length <= 8){
-        password.style.borderColor = "red";
+        password.style.borderBottomColor = "red";
         pass_err.classList.add('err');
         pass_err.innerText = "weak password";
 
@@ -53,7 +53,7 @@ if(email.value === ""){
         }
         
     if(password.value.length > 8 ){
-            password.style.borderColor = "green";
+            password.style.borderBottomColor = "green";
             pass_err.classList.add('success');
             pass_err.innerText = "Strong password";
     }
@@ -63,20 +63,20 @@ if(email.value === ""){
    const ConfirmFunc = () => {
 
     if(confirm_pass.value.length < 8 && confirm_pass.value !== password.value){
-        confirm_pass.style.borderColor ="red";
+        confirm_pass.style.borderBottomColor ="red";
             pass2_err. classList.add('err');
             pass2_err.innerText = "password mismatch";
     }
     
 
     if(confirm_pass.value === ""){
-        confirm_pass.style.borderColor ="red";
+        confirm_pass.style.borderBottomColor ="red";
             pass2_err. classList.add('err');
             pass2_err.innerText = "confirm password";
     }
     
     if(confirm_pass.value === password.value && confirm_pass.value.length > 8){
-        confirm_pass.style.borderColor ="green";
+        confirm_pass.style.borderBottomColor ="green";
             pass2_err. classList.add('success');
             pass2_err.innerText = "correct";
     }
@@ -86,7 +86,7 @@ if(email.value === ""){
 
 passFunc();
 ConfirmFunc();
-     // validate();    
+      //validate();    
 });
 
 const validate = () => {
